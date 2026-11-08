@@ -1,0 +1,13 @@
+{
+  "name": "au-claim-mapper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Legal information for people in Australia: which routes may be open, the time limits, the costs risks, and when to see a lawyer.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.3.2"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AU Claim Mapper</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">AU Claim Mapper · early prototype</div>
+    <h1>What are my options, and how long do I have?</h1>
+    <p class="lede">Answer a few plain questions to see which routes may be open to you, the usual time limits, the costs risks, and when to talk to a lawyer.</p>
+    <p class="notice"><strong>This is general legal information, not legal advice.</strong> It can't take account of everything about your situation. Time limits can sometimes be extended, and other rules may apply. Before you rely on any date or choose a route, talk to a lawyer, union or community legal centre. Nothing you enter leaves this page.</p>
+    <p class="notice safety">If you or someone else is in danger, call <strong>000</strong>. If you're in distress, Lifeline is on <strong>13 11 14</strong>. If you need an interpreter, TIS National is on <strong>131 450</strong>.</p>
+  </header>
+
+  <nav class="picker" id="picker" aria-label="Choose a topic"></nav>
+
+  <section class="tool" aria-live="polite">
+    <div class="panel">
+      <div class="panel-label">Your answers</div>
+      <h2 id="question"></h2>
+      <form id="form" novalidate></form>
+      <div id="result" class="result"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-label">For a lawyer: how this answer was reached</div>
+      <dl class="dates" id="dates"></dl>
+      <ol class="trace" id="trace"></ol>
+      <p class="hint">Each step cites the provision it comes from. Citations marked "to verify" have not yet been checked against the authorised text.</p>
+      <div class="panel-label">Law used</div>
+      <ul class="sources" id="sources"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>A personal project by Michael Fairweather. Not affiliated with any law firm. It uses only public law and has not been reviewed by a practising lawyer in each jurisdiction. Legislation is cited from the official registers; Commonwealth and WA legislation is used under CC BY 4.0.</p>
+  </footer>
+</div>
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
