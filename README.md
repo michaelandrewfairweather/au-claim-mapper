@@ -39,6 +39,12 @@ npm test
 
 The runner checks each module's worked cases, then scores the 50-scenario intake suite in [tests/intake-suite.yaml](tests/intake-suite.yaml) on what the modules can decide: status, deadline, that the verified law is cited, and safe wording. Conversational behaviours (tone, safety handling, follow-up questions) are listed but not scored. `npm test -- --verbose` shows every scenario.
 
+## Live site (GitHub Pages)
+
+https://michaelandrewfairweather.github.io/au-claim-mapper/
+
+`.github/workflows/pages.yml` runs the tests on every push to `main` and, if they pass, publishes `public/` to GitHub Pages. GitHub Pages ignores `public/_headers`, so the security headers apply only on Cloudflare.
+
 ## Deploy to Cloudflare Pages
 
 The site is the static files in `public/`, with relative paths and no build step. Only that folder is published; `docs/`, `tests/` and `package.json` stay in the repository.
