@@ -4,8 +4,8 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
-import { MODULES, citesOf } from "../src/modules/index.js";
-import { SOURCES } from "../src/law/sources.js";
+import { MODULES, citesOf } from "../public/src/modules/index.js";
+import { SOURCES } from "../public/src/law/sources.js";
 import { SCENARIO_INPUTS } from "./scenario-inputs.mjs";
 
 const verbose = process.argv.includes("--verbose");

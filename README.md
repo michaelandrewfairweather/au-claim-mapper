@@ -15,13 +15,13 @@ See [docs/VERIFICATION.md](docs/VERIFICATION.md) for exactly what was checked, a
 
 ## Run it
 
-It is static HTML and ES modules with no build step. Serve the folder with any static server and open it:
+It is static HTML and ES modules with no build step. The site is everything in `public/`; serve that folder with any static server and open it:
 
 ```bash
-python -m http.server 8790
+python -m http.server 8790 --directory public
 ```
 
-Then open http://localhost:8790. (Opening `index.html` straight from disk doesn't work, because browsers block ES modules on `file://`.)
+Then open http://localhost:8790. (Opening `public/index.html` straight from disk doesn't work, because browsers block ES modules on `file://`.)
 
 ## Test it
 
@@ -37,20 +37,20 @@ The runner checks each module's worked cases, then scores the 50-scenario intake
 
 ## Deploy to Cloudflare Pages
 
-The site is static files with relative paths and no build step, so Cloudflare Pages serves the repository as it is.
+The site is the static files in `public/`, with relative paths and no build step. Only that folder is published; `docs/`, `tests/` and `package.json` stay in the repository.
 
 1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Connect to Git**, and authorise the GitHub account that owns this repository (`michaelandrewfairweather`). Choose `au-claim-mapper`.
 2. Build settings:
    - **Production branch:** `main`
    - **Framework preset:** None
    - **Build command:** leave empty
-   - **Build output directory:** `/`
+   - **Build output directory:** `public`
 3. Save and deploy. Each push to `main` redeploys; other branches get preview URLs.
 4. To add the custom domain: open the Pages project → **Custom domains → Set up a custom domain**, enter the domain, and follow the DNS steps (automatic if the domain's DNS is on Cloudflare).
 
 Notes:
-- `_headers` sets a strict Content Security Policy (everything from this site only; no network calls), `no-referrer`, and `noindex` on `/docs/` and `/tests/`.
-- With output `/`, **every file in the repository is publicly reachable** on the site, including `docs/`, `tests/` and `package.json`. Nothing in them is secret, but if you'd rather publish only the app, move `index.html` and `src/` into a `public/` folder and set the output directory to `public`.
+- `public/_headers` sets a strict Content Security Policy (everything from this site only; no network calls), `no-referrer` and `nosniff`.
+- Cloudflare may run `npm install` because of `package.json` at the root. That's harmless: nothing outside `public/` is published.
 - After deploying, check the page loads with no console errors (the CSP will block anything not served from the site).
 
 ## Principles

@@ -15,15 +15,15 @@ This is a proposal for Michael to accept or change. The first slice (below) is b
 ## Layout
 
 ```
-index.html                     app shell: pick a topic, answer questions, see result + trace
-src/core/dates.js              date arithmetic (anniversaries, "within N days after")
-src/core/render.js             shared client-view and trace rendering
-src/law/sources.js             the Acts used: title, jurisdiction, version, URL, licence attribution
-src/modules/<module>.js        rule table + evaluate(inputs, today) + client wording
-tests/run.mjs                  unit cases for each module + intake-suite scoring
-tests/scenario-inputs.mjs      maps each suite scenario to module inputs (or "not covered yet")
-tests/intake-suite.yaml        the 50 scenarios (copied in; firm-neutral)
-docs/                          architecture, verification log, open questions
+public/index.html                app shell: pick a topic, answer questions, see result + trace
+public/src/core/dates.js         date arithmetic (anniversaries, "within N days after")
+public/src/core/render.js        shared client-view and trace rendering
+public/src/law/sources.js        the Acts used: title, jurisdiction, version, URL, licence attribution
+public/src/modules/<m>.js        rule table + evaluate(inputs, today) + client wording
+tests/run.mjs                    unit cases for each module + intake-suite scoring
+tests/scenario-inputs.mjs        maps each suite scenario to module inputs (or "not covered yet")
+tests/intake-suite.yaml          the 50 scenarios (copied in; firm-neutral)
+docs/                            architecture, verification log, open questions
 ```
 
 ## Module contract
