@@ -1,4 +1,6 @@
-# AU Claim Mapper
+# Do I Have Time?
+
+Public site: doihavetime.org (planned). Repository and code name: AU Claim Mapper.
 
 A browser-only tool that helps people in Australia with injuries, workplace problems, estates and other legal problems see which routes may be open to them, the usual time limits, the costs risks, and when to hand over to a lawyer.
 
@@ -46,7 +48,7 @@ The site is the static files in `public/`, with relative paths and no build step
    - **Build command:** leave empty
    - **Build output directory:** `public`
 3. Save and deploy. Each push to `main` redeploys; other branches get preview URLs.
-4. To add the custom domain: open the Pages project → **Custom domains → Set up a custom domain**, enter the domain, and follow the DNS steps (automatic if the domain's DNS is on Cloudflare).
+4. To add the custom domain: open the Pages project → **Custom domains → Set up a custom domain**, enter `doihavetime.org` (and `www.doihavetime.org` if wanted, redirecting to the bare domain), and follow the DNS steps (automatic if the domain's DNS is on Cloudflare).
 
 Notes:
 - `public/_headers` sets a strict Content Security Policy (everything from this site only; no network calls), `no-referrer` and `nosniff`.

@@ -16,8 +16,8 @@ Intake suite coverage today: 17 scenarios scored (all pass), 2 partial, 31 not c
 
 ## Questions for Michael
 
-1. **Repository**: create `michaelandrewfairweather/au-claim-mapper` on GitHub? Public or private?
-2. **Domain**: one has been floated (shithitthefan.org). The earlier advice was against a profane domain for people in crisis; a plain name (for example "claimmapper" or "whatcanido") may be trusted more. Your call.
+1. **Repository**: settled (private, michaelandrewfairweather/au-claim-mapper; site served from `public/` on Cloudflare Pages).
+2. **Domain**: settled: doihavetime.org (public name "Do I Have Time?").
 3. **Counting the last day**: show the exact last day, or a "file by" date a week earlier so nobody files on the last day?
 4. **"Ought to have known"** (Vic s 27F): the tool shows both dates and treats the earlier as the one to beat. Too alarming for late-discovered medical injuries?
 5. **Close associates** (Vic s 27I(2)): ask about it at all, or always hand over when a minor was hurt by someone in the household?

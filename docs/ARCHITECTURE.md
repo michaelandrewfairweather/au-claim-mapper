@@ -1,6 +1,6 @@
 # Architecture (proposal, 8 November 2026)
 
-AU Claim Mapper helps a person in Australia see which legal routes may be open to them, the time limits, the costs risks, and when to hand over to a lawyer. It gives legal information, not advice.
+AU Claim Mapper (public name: Do I Have Time?, doihavetime.org) helps a person in Australia see which legal routes may be open to them, the time limits, the costs risks, and when to hand over to a lawyer. It gives legal information, not advice.
 
 This is a proposal for Michael to accept or change. The first slice (below) is built to it, so changes are cheap now.
 
