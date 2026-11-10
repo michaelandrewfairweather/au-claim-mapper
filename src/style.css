@@ -84,4 +84,6 @@ select, input[type="date"], input[type="number"] { font: inherit; color: var(--i
 .dates dt { color: var(--muted); }
 .dates dd { margin: 0; font-family: var(--font-mono); }
 .sources { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); display: grid; gap: 4px; }
+.lawyer { display: grid; gap: 10px; max-width: 72ch; }
+.lawyer ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 footer { font-size: 13px; color: var(--muted); max-width: 72ch; }

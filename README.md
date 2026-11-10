@@ -35,6 +35,24 @@ npm test
 
 The runner checks each module's worked cases, then scores the 50-scenario intake suite in [tests/intake-suite.yaml](tests/intake-suite.yaml) on what the modules can decide: status, deadline, that the verified law is cited, and safe wording. Conversational behaviours (tone, safety handling, follow-up questions) are listed but not scored. `npm test -- --verbose` shows every scenario.
 
+## Deploy to Cloudflare Pages
+
+The site is static files with relative paths and no build step, so Cloudflare Pages serves the repository as it is.
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Connect to Git**, and authorise the GitHub account that owns this repository (`michaelandrewfairweather`). Choose `au-claim-mapper`.
+2. Build settings:
+   - **Production branch:** `main`
+   - **Framework preset:** None
+   - **Build command:** leave empty
+   - **Build output directory:** `/`
+3. Save and deploy. Each push to `main` redeploys; other branches get preview URLs.
+4. To add the custom domain: open the Pages project → **Custom domains → Set up a custom domain**, enter the domain, and follow the DNS steps (automatic if the domain's DNS is on Cloudflare).
+
+Notes:
+- `_headers` sets a strict Content Security Policy (everything from this site only; no network calls), `no-referrer`, and `noindex` on `/docs/` and `/tests/`.
+- With output `/`, **every file in the repository is publicly reachable** on the site, including `docs/`, `tests/` and `package.json`. Nothing in them is secret, but if you'd rather publish only the app, move `index.html` and `src/` into a `public/` folder and set the output directory to `public`.
+- After deploying, check the page loads with no console errors (the CSP will block anything not served from the site).
+
 ## Principles
 
 - Never say "too late" or "no claim": courts and tribunals can often extend time.
