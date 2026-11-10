@@ -8,6 +8,8 @@ It gives **legal information, not legal advice**. Every rule cites the Act and s
 
 ## What it covers so far
 
+On the public site, only the Victorian check is released (`public/src/modules/released.js`). The employment comparison is built and tested but shows as "coming soon" until every rule it cites is verified; 13 citations are still marked "to-verify". Before enabling Cloudflare Web Analytics, update the privacy line in the About section, which says the site uses no analytics.
+
 | Module | Covers | Law |
 |---|---|---|
 | Personal injury time limits: Victoria | Adults, minors (including injury by a parent or close associate), child abuse (no limit, and reopening earlier settlements), schemes outside Part IIA, deaths, pre-2003 acts, incapacity | Limitation of Actions Act 1958 (Vic) Part IIA, version 113 |

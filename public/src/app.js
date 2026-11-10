@@ -1,4 +1,4 @@
-import { MODULES } from "./modules/index.js";
+import { RELEASED as MODULES, COMING_SOON } from "./modules/released.js";
 import { todayIso } from "./core/dates.js";
 import { buildForm, readAnswers, applyVisibility, renderClient, renderTrace, renderSources } from "./core/render.js";
 
@@ -41,6 +41,12 @@ for (const m of Object.values(MODULES)) {
   b.textContent = m.meta.title;
   b.addEventListener("click", () => select(m.meta.id));
   picker.append(b);
+}
+for (const c of COMING_SOON) {
+  const s = document.createElement("span");
+  s.className = "soon";
+  s.textContent = `${c.title} (${c.note.toLowerCase()})`;
+  picker.append(s);
 }
 $("form").addEventListener("input", update);
 $("form").addEventListener("change", update);
